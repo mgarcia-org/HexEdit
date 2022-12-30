@@ -903,9 +903,9 @@ size_w RecurseType(HWND hwndGV, HGRIDITEM hRoot, Type *type, size_w dwOffset, Ty
 		count = 0;
 
 		Evaluate(GridView_GetParent(hwndGV, hRoot), type->elements, &count, dwOffset, hwndHV, hwndGV);
-		
-		count &= 0xffff;
-		count = min(count,100);
+		// remove limits
+		// count &= 0xffff;
+		// count = min(count,100);
 
 		for(i = 0; i < count; i++)
 		{
